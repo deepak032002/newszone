@@ -3,3 +3,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.promptOptions li img {
+    width: auto;
+    height: 20px;
+}
+
+.promptOptions::-webkit-scrollbar {
+    width: 5px;
+    background-color: #cacaca;
+}
+
+.promptOptions::-webkit-scrollbar-thumb {
+    background-color: #808080;
+}
+
+.promptOptionWrapper {
+    transition: .6s;
+    display: none;
+}
+
+.prompt i{
+    transition: .6s;
+}
+
+#countryMenuTrigger:checked ~ .promptOptionWrapper {
+    display: unset;
+    transition: .6s;
+}
+
+#countryMenuTrigger:checked ~ .prompt i {
+    transform: rotate(-180deg);
+    transition: .6s;
+}
